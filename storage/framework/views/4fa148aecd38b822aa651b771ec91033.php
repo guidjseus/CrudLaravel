@@ -16,7 +16,7 @@
     <?php endif; ?>
     <div class="container mt-5">
         <h2>Edicao de Usuário</h2>
-        <form action="<?php echo e(route('editar_usuario', ['id' => $usuario->id])); ?>" method="POST">
+        <form action="<?php echo e(route('update_usuario', ['id' => $usuario->id])); ?>" method="POST">
             <?php echo csrf_field(); ?>
             <div class="form-group">
                 <label for="nome">Nome</label>

@@ -15,7 +15,7 @@
     @endif
     <div class="container mt-5">
         <h2>Edicao de Usuário</h2>
-        <form action="{{ route('editar_usuario', ['id' => $usuario->id])}}" method="POST">
+        <form action="{{ route('update_usuario', ['id' => $usuario->id])}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="nome">Nome</label>

@@ -32,12 +32,14 @@ class UsuariosController extends Controller
         return view('usuario.show' , ['usuario' => $usuario]);
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $usuario = Usuarios::findOrFail($id);
         return view('usuario/edit' ,['usuario' => $usuario]);
         }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
 
         $usuario = Usuarios::findOrFail($id);
         $usuario->update([
@@ -50,17 +52,28 @@ class UsuariosController extends Controller
 
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
+        
+        $usuario = Usuarios::findOrFail($id);
+        return view('usuario/delete' , ['usuario' => $usuario]);
+    }
+
+    public function destroy($id)
+    {
 
         $usuario = Usuarios::findOrFail($id);
-        return view('usuario.delete' , ['usuario' => $usuario]);
-    }
-
-    public function destroy($id){
-
-        $usuario = Usuarios::finfOrFail($id);
         $usuario->delete();
 
-        return redirect('usuario/excluir/' .$usuario->id)->with('success', 'Usuario Excluido com Sucesso!');
+        return  "Usuario Excluido com Sucesso!";
     }
+
+    public function index()
+    {
+
+        $usuario = Usuarios::all();
+        return view('usuario.index', compact('usuario'));
+    }
+    
+
 }
