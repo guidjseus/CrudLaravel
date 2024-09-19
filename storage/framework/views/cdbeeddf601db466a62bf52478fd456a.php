@@ -10,11 +10,11 @@
 <body>
     <div class="container mt-5">
         <h2>Excluir Usuário</h2>
-        <form action="{{ route('excluir_usuario', ['id' => $usuario->id]) }}" method="POST"> 
-            @csrf
+        <form action="<?php echo e(route('excluir_usuario', ['id' => $usuario->id])); ?>" method="POST"> 
+            <?php echo csrf_field(); ?>
             <div class="form-group">
                 <label for="usuarioNome">Tem certeza que deseja excluir este usuário?</label>
-                <input type="text" class="form-control" id="usuarioNome" value="{{ $usuario->nome }}" readonly> 
+                <input type="text" class="form-control" id="usuarioNome" value="<?php echo e($usuario->nome); ?>" readonly> 
             </div>
             <button type="submit" class="btn btn-danger">Sim</button>
         </form>
@@ -26,3 +26,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php /**PATH /home/desenvolvimento/Documentos/projetoG/resources/views/usuario/delete.blade.php ENDPATH**/ ?>
