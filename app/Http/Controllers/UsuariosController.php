@@ -40,7 +40,6 @@ class UsuariosController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $usuario = Usuarios::findOrFail($id);
         $usuario->update([
             'nome' => $request->nome,
@@ -48,7 +47,7 @@ class UsuariosController extends Controller
             'senha' => $request->senha,
         ]);
 
-        return redirect('usuario/editar/'.$usuario->id)->with('success','Produto Cadastrado com Sucesso!');
+        return redirect('usuario/'.$usuario->$id)->with('success','Produto Cadastrado com Sucesso!');
 
     }
 
@@ -56,7 +55,7 @@ class UsuariosController extends Controller
     {
         
         $usuario = Usuarios::findOrFail($id);
-        return view('usuario/delete' , ['usuario' => $usuario]);
+        return view('usuario.delete', compact('usuario'));
     }
 
     public function destroy($id)
@@ -65,7 +64,7 @@ class UsuariosController extends Controller
         $usuario = Usuarios::findOrFail($id);
         $usuario->delete();
 
-        return  "Usuario Excluido com Sucesso!";
+        return redirect('usuario/'.$usuario->delete())->with('success','Usuario Excluido com Sucesso!');
     }
 
     public function index()

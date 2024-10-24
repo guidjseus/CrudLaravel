@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:FaRTUj8QFL5nCaupfuq81ioFn1HUlnIGczniRy/CI70=',
+    'key' => 'base64:YJ65q74gkY9U0bMVsSTggIvO6dSaDoCwF7cvRN3ofak=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -132,20 +132,20 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'log',
+    'default' => 'null',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '',
-        'secret' => '',
-        'app_id' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'app_id' => NULL,
         'options' => 
         array (
-          'cluster' => 'mt1',
+          'cluster' => NULL,
           'host' => 'api-mt1.pusher.com',
-          'port' => '443',
+          'port' => 443,
           'scheme' => 'https',
           'encrypted' => true,
           'useTLS' => true,
@@ -198,8 +198,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/desenvolvimento/Documentos/projetoG/storage/framework/cache/data',
-        'lock_path' => '/home/desenvolvimento/Documentos/projetoG/storage/framework/cache/data',
+        'path' => '/home/desenvolvimento/CrudLaravel/storage/framework/cache/data',
+        'lock_path' => '/home/desenvolvimento/CrudLaravel/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -232,8 +232,8 @@
       'dynamodb' => 
       array (
         'driver' => 'dynamodb',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'region' => 'us-east-1',
         'table' => 'cache',
         'endpoint' => NULL,
@@ -282,7 +282,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'usuariosG',
+        'database' => 'guilherme',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -292,9 +292,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'usuariosG',
+        'database' => 'guilherme',
         'username' => 'root',
-        'password' => 'M@rata123',
+        'password' => '123456',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -312,9 +312,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'usuariosG',
+        'database' => 'guilherme',
         'username' => 'root',
-        'password' => 'M@rata123',
+        'password' => '123456',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -327,9 +327,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'usuariosG',
+        'database' => 'guilherme',
         'username' => 'root',
-        'password' => 'M@rata123',
+        'password' => '123456',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -372,13 +372,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/desenvolvimento/Documentos/projetoG/storage/app',
+        'root' => '/home/desenvolvimento/CrudLaravel/storage/app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/desenvolvimento/Documentos/projetoG/storage/app/public',
+        'root' => '/home/desenvolvimento/CrudLaravel/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -386,10 +386,10 @@
       's3' => 
       array (
         'driver' => 's3',
-        'key' => '',
-        'secret' => '',
-        'region' => 'us-east-1',
-        'bucket' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'region' => NULL,
+        'bucket' => NULL,
         'url' => NULL,
         'endpoint' => NULL,
         'use_path_style_endpoint' => false,
@@ -398,7 +398,7 @@
     ),
     'links' => 
     array (
-      '/home/desenvolvimento/Documentos/projetoG/public/storage' => '/home/desenvolvimento/Documentos/projetoG/storage/app/public',
+      '/home/desenvolvimento/CrudLaravel/public/storage' => '/home/desenvolvimento/CrudLaravel/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -422,7 +422,7 @@
     'default' => 'stack',
     'deprecations' => 
     array (
-      'channel' => NULL,
+      'channel' => 'null',
       'trace' => false,
     ),
     'channels' => 
@@ -439,14 +439,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/desenvolvimento/Documentos/projetoG/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/desenvolvimento/Documentos/projetoG/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -457,7 +457,7 @@
         'url' => NULL,
         'username' => 'Laravel Log',
         'emoji' => ':boom:',
-        'level' => 'debug',
+        'level' => 'critical',
         'replace_placeholders' => true,
       ),
       'papertrail' => 
@@ -511,7 +511,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/desenvolvimento/Documentos/projetoG/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -524,9 +524,9 @@
       array (
         'transport' => 'smtp',
         'url' => NULL,
-        'host' => 'mailpit',
-        'port' => '1025',
-        'encryption' => NULL,
+        'host' => 'smtp.mailgun.org',
+        'port' => 587,
+        'encryption' => 'tls',
         'username' => NULL,
         'password' => NULL,
         'timeout' => NULL,
@@ -580,14 +580,14 @@
     'from' => 
     array (
       'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'name' => 'Example',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/desenvolvimento/Documentos/projetoG/resources/views/vendor/mail',
+        0 => '/home/desenvolvimento/CrudLaravel/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -620,8 +620,8 @@
       'sqs' => 
       array (
         'driver' => 'sqs',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
         'queue' => 'default',
         'suffix' => NULL,
@@ -689,18 +689,18 @@
     ),
     'ses' => 
     array (
-      'key' => '',
-      'secret' => '',
+      'key' => NULL,
+      'secret' => NULL,
       'region' => 'us-east-1',
     ),
   ),
   'session' => 
   array (
     'driver' => 'file',
-    'lifetime' => '120',
+    'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/desenvolvimento/Documentos/projetoG/storage/framework/sessions',
+    'files' => '/home/desenvolvimento/CrudLaravel/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -721,9 +721,9 @@
   array (
     'paths' => 
     array (
-      0 => '/home/desenvolvimento/Documentos/projetoG/resources/views',
+      0 => '/home/desenvolvimento/CrudLaravel/resources/views',
     ),
-    'compiled' => '/home/desenvolvimento/Documentos/projetoG/storage/framework/views',
+    'compiled' => '/home/desenvolvimento/CrudLaravel/storage/framework/views',
   ),
   'flare' => 
   array (
@@ -809,7 +809,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => '/home/desenvolvimento/Documentos/projetoG',
+    'remote_sites_path' => '/home/desenvolvimento/CrudLaravel',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
