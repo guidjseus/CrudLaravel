@@ -23,7 +23,7 @@ class UsuariosController extends Controller
             'senha' => $request->senha,
         ]);
 
-        return "Usuario Cadastrado!";
+            return redirect()->route('usuario.index')->with('success', 'Usuário criado com sucesso!');
     }
 
     public function show($id)

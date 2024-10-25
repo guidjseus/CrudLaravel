@@ -198,8 +198,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/desenvolvimento/CrudLaravel/storage/framework/cache/data',
-        'lock_path' => '/home/desenvolvimento/CrudLaravel/storage/framework/cache/data',
+        'path' => '/home/desenvolvimento/Guilherme/storage/framework/cache/data',
+        'lock_path' => '/home/desenvolvimento/Guilherme/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -372,13 +372,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/desenvolvimento/CrudLaravel/storage/app',
+        'root' => '/home/desenvolvimento/Guilherme/storage/app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/desenvolvimento/CrudLaravel/storage/app/public',
+        'root' => '/home/desenvolvimento/Guilherme/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -398,7 +398,7 @@
     ),
     'links' => 
     array (
-      '/home/desenvolvimento/CrudLaravel/public/storage' => '/home/desenvolvimento/CrudLaravel/storage/app/public',
+      '/home/desenvolvimento/Guilherme/public/storage' => '/home/desenvolvimento/Guilherme/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -439,14 +439,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/Guilherme/storage/logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/Guilherme/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -511,7 +511,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/desenvolvimento/CrudLaravel/storage/logs/laravel.log',
+        'path' => '/home/desenvolvimento/Guilherme/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -587,7 +587,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/desenvolvimento/CrudLaravel/resources/views/vendor/mail',
+        0 => '/home/desenvolvimento/Guilherme/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -700,7 +700,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/desenvolvimento/CrudLaravel/storage/framework/sessions',
+    'files' => '/home/desenvolvimento/Guilherme/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -721,9 +721,9 @@
   array (
     'paths' => 
     array (
-      0 => '/home/desenvolvimento/CrudLaravel/resources/views',
+      0 => '/home/desenvolvimento/Guilherme/resources/views',
     ),
-    'compiled' => '/home/desenvolvimento/CrudLaravel/storage/framework/views',
+    'compiled' => '/home/desenvolvimento/Guilherme/storage/framework/views',
   ),
   'flare' => 
   array (
@@ -809,7 +809,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => '/home/desenvolvimento/CrudLaravel',
+    'remote_sites_path' => '/home/desenvolvimento/Guilherme',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

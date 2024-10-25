@@ -56,6 +56,11 @@
     </style>
 </head>
 <body>
+    @if (session('success'))
+    <div class = "alert alert-success form-control" >
+        {{ session('success')}}
+    </div>
+    @endif
     <div class="container mt-5">
         <h2>Cadastro de Usuário</h2>
         <form action="{{ route('lista_usuario') }}" method="POST">

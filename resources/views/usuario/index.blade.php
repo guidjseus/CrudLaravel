@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+    <!-- Adicionando Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>  
         body {
             background-color: #eff1f3; 
             color: #333; 
@@ -14,7 +16,7 @@
         .container {
             background-color: #fff; 
             border-radius: 15px; 
-            padding: 30px; /
+            padding: 30px; 
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
             max-width: 800px; 
             margin: auto;
@@ -31,15 +33,24 @@
         .btn-success {
             margin-bottom: 1rem; 
         }
-        .btn-warning, .btn-danger {
+        .btn-warning, .btn-danger, .btn-visualizar {
             margin-left: 0.5rem; 
+        }
+        .btn-visualizar {
+            background-color: #007BFF;
+            color: white;
+        }
+        .btn-visualizar:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <h2>Lista de Usuários</h2>
-        <a href="{{ route('usuario_create') }}" class="btn btn-success mb-3">Cadastrar Usuário</a>
+        <a href="{{ route('usuario_create') }}" class="btn btn-success mb-3">
+            <i class="fas fa-user-plus"></i> Cadastrar Usuário
+        </a>
         <table class="table">
             <thead>
                 <tr>
@@ -54,8 +65,15 @@
                     <td>{{ $usuario->id }}</td>
                     <td>{{ $usuario->nome }}</td>
                     <td>
-                        <a href="{{ route('editar_usuario', ['id' => $usuario->id]) }}" class="btn btn-warning">Editar</a>
-                        <a href="{{ route('deletar_usuario', ['id' => $usuario->id]) }}" class="btn btn-danger">Excluir</a>
+                        <a href="{{ route('editar_usuario', ['id' => $usuario->id]) }}" class="btn btn-warning">
+                            <i class="fas fa-edit"></i> 
+                        </a>
+                        <a href="{{ route('deletar_usuario', ['id' => $usuario->id]) }}" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        <a href="{{ route('show_usuario', ['id' => $usuario->id]) }}" class="btn btn-visualizar">
+                            <i class="fas fa-eye"></i> 
+                        </a>
                     </td>
                 </tr>
                 @endforeach
